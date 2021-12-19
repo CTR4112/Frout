@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>FROUT - the platform for farmers</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.svg" />
+
+  <!-- ========================= CSS here ========================= -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/LineIcons.3.0.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/tiny-slider.css" />
+  <link rel="stylesheet" href="assets/css/glightbox.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GB0ZVC7X1M"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-GB0ZVC7X1M");
+  </script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NW7LMLP');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Facebook Pixel Code -->
+  <script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "1127399311131030");
+    fbq("track", "PageView");
+  </script>
+  <noscript><img height="1" width="1" style="display: none"
+      src="https://www.facebook.com/tr?id=1127399311131030&ev=PageView&noscript=1" /></noscript>
+  <!-- End Facebook Pixel Code -->
+</head>
+
+<body data-spy="scroll" data-target="#nav" data-offset="50">
+  <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-icon">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- /End Preloader -->
+  <!-- Start Modal (Needs to be before NavBar!)-->
+  <div id="emailpop" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Vielen Dank für dein Interesse</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="contact-formular-2" class="form" method="post" target="#" enctype="application/x-www-form-urlencoded"
+          action="https://func-emaillanding.azurewebsites.net/api/email?code=UYa/MTo16ZqvmKdT/1xPGbE1R3Tl8c8Zcoy3DKh9iGHdNoERZ2YNxg==">
+          <div class="modal-body contact-us">
+            <p>
+              Wir sind fast fertig. Eine großartige neue Community mit vielen
+              Antworkern kommt sehr bald. Gib deine E-Mail ein und genieße exklusive Vorteile beim Launch!
+            </p>
+            <br />
+            <div class="contact-form">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-12">
+                  <div class="form-group">
+                    <input name="email" type="email" placeholder="Email*" required="required" />
+                    <input name="InterestType" value="Abo" class="d-none" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" data-bs-dismiss="modal">
+              Zurück
+            </button>
+            <div class="button">
+              <button type="submit" class="btn btn-primary">Senden</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- END Modal-->
+  <!-- Start Header Area -->
+  <header class="header navbar-area">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-12">
+          <div class="nav-inner">
+            <!-- Start Navbar -->
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/white-logo.svg" alt="Logo" />
+              </a>
+              <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+                <span class="toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                <ul id="nav" class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a href="#top" aria-label="Toggle navigation" class="nav-link active">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#features" aria-label="Toggle navigation" class="nav-link">How does it work?</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#services" aria-label="Toggle navigation" class="nav-link">Our services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#pricing" aria-label="Toggle navigation" class="nav-link">Prices</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- navbar collapse 
+                <div class="button home-btn">
+                  <a href="signup.html" class="btn">Jetzt vorregistrieren</a>
+                </div>
+                -->
+            </nav>
+            <!-- End Navbar -->
+          </div>
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+  </header>
+  <!-- End Header Area -->
+  <!-- Start Hero Area -->
+  <section class="hero-area" id="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 col-md-12 col-12">
+          <div class="hero-content">
+            <h4>We are the way</h4>
+            <h1>
+              For each bundle of destinations <br />
+              the most efficient route
+            </h1>
+            <p>
+              Never search adresses unefficiently again<br />Everytime, everywhere
+            </p>
+            <div class="button">
+              <a class="btn" data-bs-toggle="modal"
+              data-bs-target="#emailpop">Interested?</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-12">
+          <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
+            <img class="main-image" src="./assets/images/Antwork1.png" alt="#" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Area -->
+
+  <!-- Start Features Area -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 col-12">
+          <div class="image wow fadeInLeft" data-wow-delay=".3s">
+            <img src="./assets/images/Antwork2.png" alt="#" />
+          </div>
+        </div>
+        <div class="col-lg-6 col-12">
+          <div class="content">
+            <h3 class="heading wow fadeInUp" data-wow-delay=".5s">
+              <span>How does it work?</span>You drive? We route!
+              <br />Everytime, everywhere
+            </h3>
+            <!-- Start Single Feature -->
+            <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+              <div class="f-icon">
+                <i class="lni lni-dashboard"></i>
+              </div>
+              <h4>Create route</h4>
+              <p>
+                Simply create routes or import destinations to create one
+              </p>
+            </div>
+            <!-- End Single Feature -->
+            <!-- Start Single Feature -->
+            <div class="single-feature wow fadeInUp" data-wow-delay=".7s">
+              <div class="f-icon">
+                <i class="lni lni-pencil-alt"></i>
+              </div>
+              <h4>Adjust, replace and add</h4>
+              <p>
+                Add additional information, replace destinations or add new ones manually
+              </p>
+            </div>
+            <!-- End Single Feature -->
+            <!-- Start Single Feature -->
+            <div class="single-feature wow fadeInUp" data-wow-delay="0.8s">
+              <div class="f-icon">
+                <i class="lni lni-vector"></i>
+              </div>
+              <h4>Select and drive</h4>
+              <p>
+                After creating all the routes and destinations, just start your job and safe the environment
+              </p>
+            </div>
+            <!-- End Single Feature -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Features Area -->
+
+  <!-- Start Services Area -->
+  <div class="services section" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title">
+            <h3 class="wow zoomIn" data-wow-delay=".2s">Our services</h3>
+            <h2 class="wow fadeInUp" data-wow-delay=".4s">
+              For you to succeed 
+            </h2>
+            <p class="wow fadeInUp" data-wow-delay=".6s">
+              We enable local farmers the chance to deliver their goods efficiently to customers, so that both parties have a lovely experiences and a lovely synergy.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".2s">
+          <div class="single-service">
+            <div class="main-icon">
+              <i class="lni lni-keyword-research"></i>
+            </div>
+            <h4 class="text-title">Adaptive Routing</h4>
+            <p>
+              Our Application serves on demand routing and provides you the most efficient way to serve your customers. Lovely, isn´t it?
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".4s">
+          <div class="single-service">
+            <div class="main-icon">
+              <i class="lni lni-grid-alt"></i>
+            </div>
+            <h4 class="text-title">Easy access</h4>
+            <p>
+              There is literally nothing you have to have in advance, just a smartphone. Install our APP and choose a subscriptin and you are ready to go. 
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay=".6s">
+          <div class="single-service">
+            <div class="main-icon">
+              <i class="lni lni-vector"></i>
+            </div>
+            <h4 class="text-title">Ratingsystem</h4>
+            <p>
+              After an order has been carried out, both parties can rate each other and their experience.
+              The better the rating, the more
+              the next advertisement appears further up.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Services Area -->
+
+  <!-- Start Pricing Table Area -->
+  <!--<section id="pricing" class="pricing-table section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title">
+            <h3 class="wow zoomIn" data-wow-delay=".2s">Your advanteges</h3>
+            <h2 class="wow fadeInUp" data-wow-delay=".4s">
+              Create unlimited routes for the most efficient ways.
+            </h2>
+            <p class="wow fadeInUp" data-wow-delay=".6s">
+             Your customer experience will skyrocket and in addition you are able to work environmentally friendly
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-12 wow fadeInUp" data-wow-delay=".4s">-->
+          <!-- Single Table -->
+          <!--<div class="single-table">-->
+            <!-- Table Head -->
+            <!--<div class="table-head">
+              <h4 class="title">Standard</h4>
+              <p class="sub-title">
+                For smaller farms who care about the environment and want to service the local people.
+              </p>
+              <div class="price">
+                <h2 class="amount">
+                  <span class="currency">€</span>15<span class="duration">/Month</span>
+                </h2>
+              </div>
+            </div>-->
+            <!-- End Table Head -->
+            <!-- Start Table Content -->
+            <!--<div class="table-content">-->
+              <!-- Table List -->
+              <!--<ul class="table-list">
+                <li>Up to 150 destinations</li>
+                <li>Rankingsystem</li>
+                <li>Integrated payment</li>
+                <li>Email support</li>
+              </ul>-->
+              <!-- End Table List -->
+            <!--</div>-->
+            <!-- End Table Content -->
+            <!--<div class="button">
+              <button id="popbutton" class="btn" data-bs-toggle="modal" data-bs-target="#emailpop">
+                Test it for free! <i class="lni lni-arrow-right"></i>
+              </button>
+            </div>
+          </div>-->
+          <!-- End Single Table-->
+        <!--</div>
+        <div class="col-lg-5 col-md-5 col-12 wow fadeInUp" data-wow-delay=".4s">-->
+          <!-- Single Table -->
+          <!--<div class="single-table">-->
+            <!-- Table Head -->
+            <!--<div class="table-head">
+              <h4 class="title">Premium</h4>
+              <p class="sub-title">
+                For huge farms with many customers, which all want to enjoy the best quality and freshness in the most efficient way.
+              </p>
+              <div class="price">
+                <h2 class="amount">
+                  <span class="currency">€</span>40<span class="duration">/Month</span>
+                </h2>
+              </div>
+            </div>-->
+            <!-- End Table Head -->
+            <!-- Start Table Content -->
+            <!--<div class="table-content">-->
+              <!-- Table List -->
+              <!--<ul class="table-list">
+                <li>Up to 2000 destinations</li>
+                <li>Rankingsystem</li>
+                <li>Integrated payment</li>
+                <li>24/7 Support</li>
+              </ul>-->
+              <!-- End Table List -->
+            <!--</div>-->
+            <!-- End Table Content -->
+            <!--<div class="button">
+              <button id="popbutton" class="btn" data-bs-toggle="modal" data-bs-target="#emailpop">
+                Test it for free!<i class="lni lni-arrow-right"></i>
+              </button>
+            </div>
+          </div>-->
+          <!-- End Single Table-->
+        <!--</div>
+      </div>
+    </div>
+  </section>-->
+  <!--/ End Pricing Table Area -->
+
+  <!-- Start Testimonials Area -->
+  <section class="testimonials style2 section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="section-title">
+            <h3 class="wow zoomIn" data-wow-delay=".2s">Customers</h3>
+            <h2 class="wow fadeInUp" data-wow-delay=".4s">
+              Some words from our customers
+            </h2>
+            <p class="wow fadeInUp" data-wow-delay=".6s">
+              We are truly committed to be as user focused as possible to make the experiece with FROUT an absolute experience
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row testimonial-slider">
+        <div class="col-lg-6 col-12">
+          <!-- Start Single Testimonial -->
+          <div class="single-testimonial">
+            <div class="inner-content">
+              <div class="quote-icon">
+                <i class="lni lni-quotation"></i>
+              </div>
+              <div class="text">
+                <p>
+                  "FROUT has made it possible for us to deliver our goods fresh to our end consumers, who can now happily enjoy fresh, environmentally friendly fruit and vegetables."
+
+        
+                </p>
+              </div>
+              <div class="author">
+                <img src="https://via.placeholder.com/100x100" alt="#" />
+                <h4 class="name">
+                  Gerhard Bantner
+                  <span class="deg">Farmer</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <!-- End Single Testimonial -->
+        </div>
+        <div class="col-lg-6 col-12">
+          <!-- Start Single Testimonial -->
+          <div class="single-testimonial">
+            <div class="inner-content">
+              <div class="quote-icon">
+                <i class="lni lni-quotation"></i>
+              </div>
+              <div class="text">
+                <p>
+                  “I love the simple fact that I can support local farmers and also enjoy fresh and healthy vegetables and fruits all day. Awesome and sustainable, exactly what i want. 
+                </p>
+              </div>
+              <div class="author">
+                <img src="https://via.placeholder.com/100x100" alt="#" />
+                <h4 class="name">
+                  David Germer
+                  <span class="deg">Private customer</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <!-- End Single Testimonial -->
+        </div>
+        <div class="col-lg-6 col-12">
+          <!-- Start Single Testimonial -->
+          <div class="single-testimonial">
+            <div class="inner-content">
+              <div class="quote-icon">
+                <i class="lni lni-quotation"></i>
+              </div>
+              <div class="text">
+                <p>
+                  “We are a highly rated restaurant and we absolutely love it to serve our customers fresh high quality food everyday. They appreciate that a lot and we are able to generate more profits aswell.”
+                </p>
+              </div>
+              <div class="author">
+                <img src="https://via.placeholder.com/100x100" alt="#" />
+                <h4 class="name">
+                  Markt Puntner
+                  <span class="deg">Chef</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+          <!-- End Single Testimonial -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Testimonial Area -->
+
+  <!-- Start Footer Area -->
+  <footer class="footer section">
+    <!-- Start Footer Top -->
+    <div class="footer-top">
+      <div class="container">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+              <!-- Single Widget -->
+              <div class="single-footer f-about">
+                <div class="logo">
+                  <a href="index.html">
+                    <img src="assets/images/logo/white-logo.svg" alt="#" />
+                  </a>
+                </div>
+                <p>FROUT - the platform for farmers</p>
+              </div>
+              <!-- End Single Widget -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ End Footer Top -->
+    <!-- Start Copyright Area -->
+    <div class="copyright-area">
+      <div class="container">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+              <p class="copyright-text">2021 FROUT - All Rights Reserved</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+              <p class="copyright-owner">Developed by FROUT</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Copyright Area -->
+  </footer>
+  <!--/ End Footer Area -->
+
+  <!-- ========================= scroll-top ========================= -->
+  <a href="#" class="scroll-top">
+    <i class="lni lni-chevron-up"></i>
+  </a>
+
+  <!-- ========================= JS here ========================= -->
+
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/tiny-slider.js"></script>
+  <!--   <script src="assets/js/glightbox.min.js"></script>-->
+
+  <script src="assets/js/count-up.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+      target: "#nav",
+    });
+  </script>
+  <script>
+    //========= testimonial
+    tns({
+      container: ".testimonial-slider",
+      items: 3,
+      slideBy: "page",
+      autoplay: false,
+      mouseDrag: true,
+      gutter: 0,
+      nav: true,
+      controls: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        540: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 2,
+        },
+        1170: {
+          items: 3,
+        },
+      },
+    });
+
+    //====== counter up
+    var cu = new counterUp({
+      start: 0,
+      duration: 2000,
+      intvalues: true,
+      interval: 100,
+      append: " ",
+    });
+    cu.start();
+
+      //========= glightbox
+    /*
+    GLightbox({
+      href: "https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM",
+      type: "video",
+      source: "youtube", //vimeo, youtube or local
+      width: 900,
+      autoplayVideos: true,
+    });
+    */
+  </script>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW7LMLP" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>

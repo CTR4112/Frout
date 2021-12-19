@@ -1,0 +1,41 @@
+.DS_Store
+
+# dotnet core
+bin/
+obj/
+project.lock.json
+NuGetScratch/
+
+api/wwwroot/**
+!api/wwwroot/scratch.html
+!api/wwwroot/favicon.ico
+
+# node
+node_modules/
+dist/
+typings/
+npm-debug.log
+
+# client-react
+client-react/components/*.js
+client-react.test/build
+!client-react.test/build/client-react/styles/
+
+# ops
+ops/hosts
+ops/config.yml
+ops/*.retry
+
+# other
+*.js.map
+
+# IDE
+.idea/
+.vs/
+frout_frontend/.parcel-cache/data.mdb
+frout_frontend/.parcel-cache/lock.mdb
+frout_frontend/dist/index.html
+frout_frontend/dist/index.38661719.js
+frout_frontend/.parcel-cache/007d962b6b452b30.txt
+frout_frontend/dist/logo.c26a725b.svg
+frout_frontend/dist/index.38661719.js
